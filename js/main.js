@@ -33,10 +33,12 @@ function flipCard() {
 
     // this.setAttribute('asyc', 'false');
     this.setAttribute('src', cards[cardId].cardImage);
+    setTimeout(function() {
+        if (cardsInPlay.length == 2) {
+            checkForMatch();
+        }
+    }, 100)
 
-    if (cardsInPlay.length == 2) {
-        checkForMatch();
-    }
 }
 
 
